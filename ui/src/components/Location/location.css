@@ -1,0 +1,52 @@
+
+
+
+.mainContainer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2vh;
+    margin-top: 1.5vh;
+}
+
+.locationHolder {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 2vh;
+    gap: 2vh;
+    overflow: hidden;
+    border-radius: 1vh;
+    font-weight: 600;
+    font-size: 1.75vh;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    align-content: center;
+    text-align: center;
+}
+
+.locationBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.faIcon {
+    height: 2.5vh;
+    width: auto;
+    color: #1e90ff;
+}
