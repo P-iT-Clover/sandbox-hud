@@ -33,7 +33,7 @@ ACTION = {
 }
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Action", ACTION)
+	exports["sandbox-base"]:RegisterComponent("Action", ACTION)
 end)
 
 RegisterNetEvent("Characters:Client:Logout", function()

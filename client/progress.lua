@@ -124,7 +124,7 @@ AddEventHandler("Keybinds:Client:KeyUp:cancel_action", function()
 end)
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Progress", PROGRESS)
+	exports["sandbox-base"]:RegisterComponent("Progress", PROGRESS)
 end)
 
 RegisterNetEvent("Characters:Client:Logout")

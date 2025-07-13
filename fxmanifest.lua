@@ -3,8 +3,8 @@ game "gta5"
 
 lua54 "yes"
 
-client_script("@pt-base/components/cl_error.lua")
-client_script("@pt-pwnzor/client/check.lua")
+client_script("@sandbox-base/components/cl_error.lua")
+client_script("@sandbox-pwnzor/client/check.lua")
 
 data_file("SCALEFORM_DLC_FILE")("stream/int3232302352.gfx")
 

@@ -136,5 +136,5 @@ RegisterNUICallback("Interaction:Back", function(data, cb)
 end)
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Interaction", INTERACTION)
+	exports["sandbox-base"]:RegisterComponent("Interaction", INTERACTION)
 end)

@@ -2,18 +2,18 @@ local _uircd = {}
 
 AddEventHandler("Hud:Shared:DependencyUpdate", RetrieveComponents)
 function RetrieveComponents()
-	Fetch = exports["pt-base"]:FetchComponent("Fetch")
-	Logger = exports["pt-base"]:FetchComponent("Logger")
-	Chat = exports["pt-base"]:FetchComponent("Chat")
-	Callbacks = exports["pt-base"]:FetchComponent("Callbacks")
-	Inventory = exports["pt-base"]:FetchComponent("Inventory")
-	Execute = exports["pt-base"]:FetchComponent("Execute")
-	Middleware = exports["pt-base"]:FetchComponent("Middleware")
+	Fetch = exports["sandbox-base"]:FetchComponent("Fetch")
+	Logger = exports["sandbox-base"]:FetchComponent("Logger")
+	Chat = exports["sandbox-base"]:FetchComponent("Chat")
+	Callbacks = exports["sandbox-base"]:FetchComponent("Callbacks")
+	Inventory = exports["sandbox-base"]:FetchComponent("Inventory")
+	Execute = exports["sandbox-base"]:FetchComponent("Execute")
+	Middleware = exports["sandbox-base"]:FetchComponent("Middleware")
 	RegisterChatCommands()
 end
 
 AddEventHandler("Core:Shared:Ready", function()
-	exports["pt-base"]:RequestDependencies("Hud", {
+	exports["sandbox-base"]:RequestDependencies("Hud", {
 		"Fetch",
 		"Logger",
 		"Chat",
@@ -157,7 +157,7 @@ function RegisterChatCommands()
 	})
 
 	-- Chat:RegisterAdminCommand("notif", function(source, args, rawCommand)
-	-- 	exports["pt-base"]:FetchComponent("Execute"):Client(source, "Notification", "Success", "This is a test, lul")
+	-- 	exports["sandbox-base"]:FetchComponent("Execute"):Client(source, "Notification", "Success", "This is a test, lul")
 	-- end, {
 	-- 	help = "Test Notification",
 	-- })

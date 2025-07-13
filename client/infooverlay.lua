@@ -1,10 +1,10 @@
 AddEventHandler("Confirm:Shared:DependencyUpdate", RetrieveInfoOverlayComponents)
 function RetrieveInfoOverlayComponents()
-	InfoOverlay = exports["pt-base"]:FetchComponent("InfoOverlay")
+	InfoOverlay = exports["sandbox-base"]:FetchComponent("InfoOverlay")
 end
 
 AddEventHandler("Core:Shared:Ready", function()
-	exports["pt-base"]:RequestDependencies("InfoOverlay", {
+	exports["sandbox-base"]:RequestDependencies("InfoOverlay", {
 		"InfoOverlay",
 	}, function(error)
 		if #error > 0 then
@@ -15,7 +15,7 @@ AddEventHandler("Core:Shared:Ready", function()
 end)
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("InfoOverlay", INFOOVERLAY)
+	exports["sandbox-base"]:RegisterComponent("InfoOverlay", INFOOVERLAY)
 end)
 
 -- RegisterNetEvent("Confirm:Client:Test", function()

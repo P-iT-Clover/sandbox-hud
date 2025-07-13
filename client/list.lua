@@ -1,13 +1,13 @@
 AddEventHandler("ListMenu:Shared:DependencyUpdate", RetrieveListComponents)
 function RetrieveListComponents()
-	Notification = exports["pt-base"]:FetchComponent("Notification")
-	Utils = exports["pt-base"]:FetchComponent("Utils")
-	UISounds = exports["pt-base"]:FetchComponent("UISounds")
-	ListMenu = exports["pt-base"]:FetchComponent("ListMenu")
+	Notification = exports["sandbox-base"]:FetchComponent("Notification")
+	Utils = exports["sandbox-base"]:FetchComponent("Utils")
+	UISounds = exports["sandbox-base"]:FetchComponent("UISounds")
+	ListMenu = exports["sandbox-base"]:FetchComponent("ListMenu")
 end
 
 AddEventHandler("Core:Shared:Ready", function()
-	exports["pt-base"]:RequestDependencies("ListMenu", {
+	exports["sandbox-base"]:RequestDependencies("ListMenu", {
 		"Notification",
 		"Utils",
 		"UISounds",
@@ -21,7 +21,7 @@ AddEventHandler("Core:Shared:Ready", function()
 end)
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("ListMenu", LISTMENU)
+	exports["sandbox-base"]:RegisterComponent("ListMenu", LISTMENU)
 end)
 
 RegisterNetEvent("ListMenu:Client:Test", function()

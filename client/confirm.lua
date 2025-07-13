@@ -1,11 +1,11 @@
 AddEventHandler("Confirm:Shared:DependencyUpdate", RetrieveConfirmComponents)
 function RetrieveConfirmComponents()
-	UISounds = exports["pt-base"]:FetchComponent("UISounds")
-	Confirm = exports["pt-base"]:FetchComponent("Confirm")
+	UISounds = exports["sandbox-base"]:FetchComponent("UISounds")
+	Confirm = exports["sandbox-base"]:FetchComponent("Confirm")
 end
 
 AddEventHandler("Core:Shared:Ready", function()
-	exports["pt-base"]:RequestDependencies("Confirm", {
+	exports["sandbox-base"]:RequestDependencies("Confirm", {
 		"UISounds",
 		"Confirm",
 	}, function(error)
@@ -17,7 +17,7 @@ AddEventHandler("Core:Shared:Ready", function()
 end)
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Confirm", CONFIRM)
+	exports["sandbox-base"]:RegisterComponent("Confirm", CONFIRM)
 end)
 
 -- RegisterNetEvent("Confirm:Client:Test", function()

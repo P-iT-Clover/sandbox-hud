@@ -205,5 +205,5 @@ Notification = {
 }
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Notification", Notification)
+	exports["sandbox-base"]:RegisterComponent("Notification", Notification)
 end)

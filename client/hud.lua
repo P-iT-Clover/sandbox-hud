@@ -57,27 +57,27 @@ end
 
 AddEventHandler("Hud:Shared:DependencyUpdate", RetrieveComponents)
 function RetrieveComponents()
-	Hud = exports["pt-base"]:FetchComponent("Hud")
-	Callbacks = exports["pt-base"]:FetchComponent("Callbacks")
-	Progress = exports["pt-base"]:FetchComponent("Progress")
-	Action = exports["pt-base"]:FetchComponent("Action")
-	Keybinds = exports["pt-base"]:FetchComponent("Keybinds")
-	ListMenu = exports["pt-base"]:FetchComponent("ListMenu")
-	Notification = exports["pt-base"]:FetchComponent("Notification")
-	Minigame = exports["pt-base"]:FetchComponent("Minigame")
-	Interaction = exports["pt-base"]:FetchComponent("Interaction")
-	Utils = exports["pt-base"]:FetchComponent("Utils")
-	Phone = exports["pt-base"]:FetchComponent("Phone")
-	Inventory = exports["pt-base"]:FetchComponent("Inventory")
-	Weapons = exports["pt-base"]:FetchComponent("Weapons")
-	Jail = exports["pt-base"]:FetchComponent("Jail")
-	Animations = exports["pt-base"]:FetchComponent("Animations")
-	Admin = exports["pt-base"]:FetchComponent("Admin")
-	Buffs = exports["pt-base"]:FetchComponent("Buffs")
+	Hud = exports["sandbox-base"]:FetchComponent("Hud")
+	Callbacks = exports["sandbox-base"]:FetchComponent("Callbacks")
+	Progress = exports["sandbox-base"]:FetchComponent("Progress")
+	Action = exports["sandbox-base"]:FetchComponent("Action")
+	Keybinds = exports["sandbox-base"]:FetchComponent("Keybinds")
+	ListMenu = exports["sandbox-base"]:FetchComponent("ListMenu")
+	Notification = exports["sandbox-base"]:FetchComponent("Notification")
+	Minigame = exports["sandbox-base"]:FetchComponent("Minigame")
+	Interaction = exports["sandbox-base"]:FetchComponent("Interaction")
+	Utils = exports["sandbox-base"]:FetchComponent("Utils")
+	Phone = exports["sandbox-base"]:FetchComponent("Phone")
+	Inventory = exports["sandbox-base"]:FetchComponent("Inventory")
+	Weapons = exports["sandbox-base"]:FetchComponent("Weapons")
+	Jail = exports["sandbox-base"]:FetchComponent("Jail")
+	Animations = exports["sandbox-base"]:FetchComponent("Animations")
+	Admin = exports["sandbox-base"]:FetchComponent("Admin")
+	Buffs = exports["sandbox-base"]:FetchComponent("Buffs")
 end
 
 AddEventHandler("Core:Shared:Ready", function()
-	exports["pt-base"]:RequestDependencies("Hud", {
+	exports["sandbox-base"]:RequestDependencies("Hud", {
 		"Hud",
 		"Callbacks",
 		"Action",
@@ -572,7 +572,7 @@ HUD = {
 }
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Hud", HUD)
+	exports["sandbox-base"]:RegisterComponent("Hud", HUD)
 end)
 
 

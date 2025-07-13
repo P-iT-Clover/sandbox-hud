@@ -1,11 +1,11 @@
 AddEventHandler("Input:Shared:DependencyUpdate", RetrieveInputComponents)
 function RetrieveInputComponents()
-	UISounds = exports["pt-base"]:FetchComponent("UISounds")
-	Input = exports["pt-base"]:FetchComponent("Input")
+	UISounds = exports["sandbox-base"]:FetchComponent("UISounds")
+	Input = exports["sandbox-base"]:FetchComponent("Input")
 end
 
 AddEventHandler("Core:Shared:Ready", function()
-	exports["pt-base"]:RequestDependencies("Input", {
+	exports["sandbox-base"]:RequestDependencies("Input", {
 		"UISounds",
 		"Input",
 	}, function(error)
@@ -17,7 +17,7 @@ AddEventHandler("Core:Shared:Ready", function()
 end)
 
 AddEventHandler("Proxy:Shared:RegisterReady", function()
-	exports["pt-base"]:RegisterComponent("Input", INPUT)
+	exports["sandbox-base"]:RegisterComponent("Input", INPUT)
 end)
 
 RegisterNetEvent("Hud:Client:GiveCash", function(hitting, data)

@@ -5,7 +5,7 @@ export default {
         /// #endif
 
         /* eslint-disable no-unreachable */
-        return fetch(`https://pt-hud/${event}`, {
+        return fetch(`https://sandbox-hud/${event}`, {
             method: 'post',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
